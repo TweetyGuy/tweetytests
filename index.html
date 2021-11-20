@@ -20,7 +20,7 @@
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(mds);
             xhr.onload = function() {
-                var data = JSON.parse(this.responseText);
+                var data = JSON.parse(xhr.responseText);
                 document.getElementById("demo").innerHTML = data.User;
             }
             xhr.open("GET", "textData.txt");
