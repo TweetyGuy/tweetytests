@@ -4,18 +4,26 @@
     </head>
     <body>
         <script>
-            var TweetyGuy = {
-            XLocation: 50,
-            YLocation: 50,
-            player:"TweetyGuy"
+            
+            var username = "Tweetyguy";
+            var message = "hello world";
+            
+            var messageData = {
+                "User": username,
+                "message": message
             }
 
-            var TweetyGuyString = JSON.stringify(TweetyGuy);
+            var mds = JSON.stringify(messageData);
             var xhr = new XMLHttpRequest();
 
-            xhr.open("POST", "receive.php");
+            xhr.open("POST", "textData.json");
             xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.send(TweetyGuyString);
+            xhr.send(mds);
+            
+            xhr.open("GET", "textData.json");
+            xhr.send();
+            
+            console.log(this.responseText)
         </script>
     </body>
 </html>
