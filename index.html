@@ -17,7 +17,7 @@
             var mds = JSON.stringify(messageData);
             var xhr = new XMLHttpRequest();
 
-            
+            permissions-policy: interest-cohort=()
             xhr.open("POST", "textData.txt");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(mds);
