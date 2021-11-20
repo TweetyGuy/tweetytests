@@ -19,11 +19,10 @@
             xhr.open("POST", "textData.txt");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(mds);
-            xhr.onload = function() {
-                console.log(this.responseText);
-            }
-            xhr.open("GET", "textData.txt");
+            var out = xhr.open("GET", "textData.txt");
             xhr.send();
+            
+            console.log(out);
         </script>
     </body>
 </html>
