@@ -3,6 +3,7 @@
     <head>
     </head>
     <body>
+        <p id="output"></p>
         <script>
             
             var username = "Tweetyguy";
@@ -16,13 +17,13 @@
             var mds = JSON.stringify(messageData);
             var xhr = new XMLHttpRequest();
 
-            xhr.open("POST", "textData.txt");
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.send(mds);
-            var out = xhr.open("GET", "textData.txt");
-            xhr.send();
-            
-            console.log(out);
+            document.getElementByID("output").innerHTML = xhr.onload() {
+                xhr.open("POST", "textData.txt");
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(mds);
+                xhr.open("GET", "textData.txt");
+                xhr.send();
+            }
         </script>
     </body>
 </html>
