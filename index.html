@@ -23,8 +23,8 @@
                 let data = JSON.parse(this.responseText);
                 document.getElementById("demo").innerHTML = data.User;
             }
-            xmlhttp.open("GET", "textData.txt");
-            xmlhttp.send();
+            xhr.open("GET", "textData.txt");
+            xhr.send();
         </script>
     </body>
 </html>
