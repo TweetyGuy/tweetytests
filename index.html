@@ -19,7 +19,7 @@
             xhr.open("POST", "textData.txt");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(mds);
-            xmlhttp.onload = function() {
+            xhr.onload = function() {
                 let data = JSON.parse(this.responseText);
                 document.getElementById("demo").innerHTML = data.User;
             }
