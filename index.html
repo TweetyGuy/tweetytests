@@ -3,27 +3,34 @@
     <head>
     </head>
     <body>
+        <canvas id="canvas"></canvas>
         <p id="output"></p>
         <script>
             
-            var username = "Tweetyguy";
-            var message = "hello world";
-            
-            var messageData = {
-                "User": username,
-                "message": message
-            }
+            var messageData = "bool drawSquare = true;"
 
             var mds = JSON.stringify(messageData);
             var xhr = new XMLHttpRequest();
 
-            document.interestCohort();
+            bool get = false;
+            
             xhr.open("POST", "textData.txt");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(mds);
             xhr.open("GET", "textData.txt");
-            xhr.send();
             
+            bool get = true;
+            
+            if (get == true) {
+                bool get = true;
+                var canvas = document.getElementById('canvas');
+				if(canvas.getContext) {
+					var c = canvas.getContext('2d');
+					
+					c.fillStyle = 'rgba(200, 140, 200, 15)';
+					c.fillRect(50, 30, 75, 15);
+			    }   
+            }
         </script>
     </body>
 </html>
